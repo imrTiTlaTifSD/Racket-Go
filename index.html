@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raquettes de padel d'occasion et neuves | Racket Go</title>
+  <meta name="description" content="Achetez des raquettes de padel neuves ou d'occasion sélectionnées avec soin : Bullpadel, NOX, Adidas, Head… Photos, prix et contact direct par WhatsApp.">
+  <meta name="theme-color" content="#0b3d91">
+  <link rel="canonical" href="https://www.example.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Racket Go – Raquettes de padel sélectionnées avec soin">
+  <meta property="og:description" content="Raquettes de padel neuves et d'occasion. Contactez-moi sur WhatsApp, Facebook, Leboncoin ou Vinted.">
+  <meta property="og:image" content="assets/img/hero.svg">
+  <link rel="icon" href="assets/img/hero.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Store","name":"Racket Go","description":"Vente de raquettes de padel neuves et d'occasion.","url":"https://www.example.com/"}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#catalogue">Aller au contenu</a>
+
+  <header class="header">
+    <div class="container header__in">
+      <a class="logo" href="#accueil" aria-label="Racket Go – accueil"><span class="logo__ball"></span>Racket<b>Go</b></a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#catalogue">Nos Raquettes</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero__in">
+        <div class="hero__text">
+          <p class="eyebrow">Padel · Neuf &amp; occasion</p>
+          <h1>Trouvez votre prochaine <span class="hl">raquette de padel</span></h1>
+          <p class="lead">Des raquettes sélectionnées avec soin, vérifiées et photographiées sous tous les angles. Prix clairs, échange direct avec le vendeur.</p>
+          <div class="hero__btns">
+            <a class="btn btn--accent btn--lg" href="#catalogue">Voir les raquettes disponibles</a>
+            <a class="btn btn--ghost btn--lg" href="#contact">Me contacter</a>
+          </div>
+        </div>
+        <img class="hero__img" src="assets/img/hero.svg" alt="Raquette de padel et balle" width="520" height="520">
+      </div>
+    </section>
+
+    <section class="about" aria-labelledby="about-t">
+      <div class="container">
+        <h2 id="about-t">Qui suis-je ?</h2>
+        <p class="about__txt">Passionné de padel, j'ai lancé cette activité pour permettre à chacun de s'équiper au bon prix, sans se tromper de raquette. Chaque modèle est vérifié, décrit honnêtement et photographié.</p>
+        <ul class="perks">
+          <li><span class="perks__ic">✔</span><strong>Sélection rigoureuse</strong><span>Uniquement des raquettes en bon état, vérifiées une à une.</span></li>
+          <li><span class="perks__ic">€</span><strong>Prix justes</strong><span>Bien moins cher que le neuf, sans surprise.</span></li>
+          <li><span class="perks__ic">💬</span><strong>Contact direct</strong><span>Je réponds personnellement, conseils de choix inclus.</span></li>
+          <li><span class="perks__ic">📸</span><strong>Photos réelles</strong><span>Vous voyez exactement ce que vous achetez.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="catalogue" id="catalogue" aria-labelledby="cat-t">
+      <div class="container">
+        <h2 id="cat-t">Nos raquettes</h2>
+        <div class="filters">
+          <label>Marque <select id="f-brand"><option value="">Toutes</option></select></label>
+          <label>État <select id="f-etat"><option value="">Tous</option><option>Neuf</option><option>Très bon état</option></select></label>
+          <label>Trier <select id="f-sort"><option value="">Par défaut</option><option value="asc">Prix croissant</option><option value="desc">Prix décroissant</option></select></label>
+        </div>
+        <div class="admin-bar" id="admin-bar" hidden></div>
+        <div class="grid" id="grid" aria-live="polite"></div>
+        <p class="empty" id="empty" hidden>Aucune raquette ne correspond à ces critères.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-t">
+      <div class="container">
+        <div class="callout">
+          <h2 id="contact-t">Une raquette vous intéresse ?</h2>
+          <p>Contactez-moi directement via WhatsApp, Facebook, Leboncoin ou Vinted pour obtenir plus d'informations et réserver votre produit.</p>
+          <div class="contact-btns" data-contact-buttons></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <div>
+        <a class="logo logo--light" href="#accueil"><span class="logo__ball"></span>Racket<b>Go</b></a>
+        <p>Raquettes de padel neuves &amp; d'occasion.</p>
+      </div>
+      <nav aria-label="Pied de page"><a href="#accueil">Accueil</a><a href="#catalogue">Nos Raquettes</a><a href="#contact">Contact</a></nav>
+      <div class="footer__social" data-contact-icons></div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Racket Go — Vente entre particuliers, sans paiement en ligne. <button class="linkbtn" id="admin-open">Admin</button></p>
+  </footer>
+
+  <a class="fab" data-wa href="#contact" aria-label="Contacter sur WhatsApp"></a>
+
+  <dialog class="modal" id="modal" aria-labelledby="m-title">
+    <button class="modal__close" id="m-close" aria-label="Fermer">×</button>
+    <div class="modal__body" id="m-body"></div>
+  </dialog>
+
+  <dialog class="modal modal--sm" id="admin-modal" aria-label="Administration">
+    <button class="modal__close" data-close aria-label="Fermer">×</button>
+    <div class="modal__body modal__body--one" id="admin-body"></div>
+  </dialog>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

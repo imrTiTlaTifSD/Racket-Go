@@ -1,0 +1,16 @@
+services:
+  racket-go:
+    image: racket-go:local
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      RACKET_GO_DATA_DIR: /app/data
+      RACKET_GO_ADMIN_PASSWORD_HASH: ${RACKET_GO_ADMIN_PASSWORD_HASH:-}
+      RACKET_GO_ADMIN_PASSWORD: ${RACKET_GO_ADMIN_PASSWORD:-}
+    volumes:
+      - racket_go_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  racket_go_data:
